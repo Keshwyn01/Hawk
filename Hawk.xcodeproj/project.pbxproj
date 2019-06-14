@@ -1,0 +1,872 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4286FC622B40A4400994C82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4286FC522B40A4400994C82 /* AppDelegate.swift */; };
+		D4286FC822B40A4400994C82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4286FC722B40A4400994C82 /* ViewController.swift */; };
+		D4286FCB22B40A4400994C82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4286FC922B40A4400994C82 /* Main.storyboard */; };
+		D4286FCD22B40A4400994C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4286FCC22B40A4400994C82 /* Assets.xcassets */; };
+		D4286FD022B40A4400994C82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4286FCE22B40A4400994C82 /* LaunchScreen.storyboard */; };
+		D4286FDB22B40A4400994C82 /* HawkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4286FDA22B40A4400994C82 /* HawkTests.swift */; };
+		D4286FE622B40A4400994C82 /* HawkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4286FE522B40A4400994C82 /* HawkUITests.swift */; };
+		D4286FEB22B40A4500994C82 /* Hawk WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D4286FEA22B40A4500994C82 /* Hawk WatchKit App.app */; };
+		D4286FF122B40A4500994C82 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4286FEF22B40A4500994C82 /* Interface.storyboard */; };
+		D4286FF322B40A4500994C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4286FF222B40A4500994C82 /* Assets.xcassets */; };
+		D4286FFA22B40A4500994C82 /* Hawk WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4286FF922B40A4500994C82 /* Hawk WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D4286FFF22B40A4500994C82 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4286FFE22B40A4500994C82 /* InterfaceController.swift */; };
+		D428700122B40A4500994C82 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D428700022B40A4500994C82 /* ExtensionDelegate.swift */; };
+		D428700322B40A4500994C82 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D428700222B40A4500994C82 /* NotificationController.swift */; };
+		D428700522B40A4600994C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D428700422B40A4600994C82 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4286FD722B40A4400994C82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4286FBA22B40A4400994C82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4286FC122B40A4400994C82;
+			remoteInfo = Hawk;
+		};
+		D4286FE222B40A4400994C82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4286FBA22B40A4400994C82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4286FC122B40A4400994C82;
+			remoteInfo = Hawk;
+		};
+		D4286FEC22B40A4500994C82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4286FBA22B40A4400994C82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4286FE922B40A4500994C82;
+			remoteInfo = "Hawk WatchKit App";
+		};
+		D4286FFB22B40A4500994C82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4286FBA22B40A4400994C82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4286FF822B40A4500994C82;
+			remoteInfo = "Hawk WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D428700D22B40A4600994C82 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D4286FFA22B40A4500994C82 /* Hawk WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D428701122B40A4600994C82 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D4286FEB22B40A4500994C82 /* Hawk WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D4286FC222B40A4400994C82 /* Hawk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hawk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4286FC522B40A4400994C82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4286FC722B40A4400994C82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4286FCA22B40A4400994C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4286FCC22B40A4400994C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4286FCF22B40A4400994C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4286FD122B40A4400994C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4286FD622B40A4400994C82 /* HawkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HawkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4286FDA22B40A4400994C82 /* HawkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawkTests.swift; sourceTree = "<group>"; };
+		D4286FDC22B40A4400994C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4286FE122B40A4400994C82 /* HawkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HawkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4286FE522B40A4400994C82 /* HawkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawkUITests.swift; sourceTree = "<group>"; };
+		D4286FE722B40A4500994C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4286FEA22B40A4500994C82 /* Hawk WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hawk WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4286FF022B40A4500994C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D4286FF222B40A4500994C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4286FF422B40A4500994C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4286FF922B40A4500994C82 /* Hawk WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Hawk WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4286FFE22B40A4500994C82 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D428700022B40A4500994C82 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D428700222B40A4500994C82 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D428700422B40A4600994C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D428700622B40A4600994C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D428700722B40A4600994C82 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4286FBF22B40A4400994C82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4286FD322B40A4400994C82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4286FDE22B40A4400994C82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4286FF622B40A4500994C82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4286FB922B40A4400994C82 = {
+			isa = PBXGroup;
+			children = (
+				D4286FC422B40A4400994C82 /* Hawk */,
+				D4286FD922B40A4400994C82 /* HawkTests */,
+				D4286FE422B40A4400994C82 /* HawkUITests */,
+				D4286FEE22B40A4500994C82 /* Hawk WatchKit App */,
+				D4286FFD22B40A4500994C82 /* Hawk WatchKit Extension */,
+				D4286FC322B40A4400994C82 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4286FC322B40A4400994C82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4286FC222B40A4400994C82 /* Hawk.app */,
+				D4286FD622B40A4400994C82 /* HawkTests.xctest */,
+				D4286FE122B40A4400994C82 /* HawkUITests.xctest */,
+				D4286FEA22B40A4500994C82 /* Hawk WatchKit App.app */,
+				D4286FF922B40A4500994C82 /* Hawk WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4286FC422B40A4400994C82 /* Hawk */ = {
+			isa = PBXGroup;
+			children = (
+				D4286FC522B40A4400994C82 /* AppDelegate.swift */,
+				D4286FC722B40A4400994C82 /* ViewController.swift */,
+				D4286FC922B40A4400994C82 /* Main.storyboard */,
+				D4286FCC22B40A4400994C82 /* Assets.xcassets */,
+				D4286FCE22B40A4400994C82 /* LaunchScreen.storyboard */,
+				D4286FD122B40A4400994C82 /* Info.plist */,
+			);
+			path = Hawk;
+			sourceTree = "<group>";
+		};
+		D4286FD922B40A4400994C82 /* HawkTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4286FDA22B40A4400994C82 /* HawkTests.swift */,
+				D4286FDC22B40A4400994C82 /* Info.plist */,
+			);
+			path = HawkTests;
+			sourceTree = "<group>";
+		};
+		D4286FE422B40A4400994C82 /* HawkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D4286FE522B40A4400994C82 /* HawkUITests.swift */,
+				D4286FE722B40A4500994C82 /* Info.plist */,
+			);
+			path = HawkUITests;
+			sourceTree = "<group>";
+		};
+		D4286FEE22B40A4500994C82 /* Hawk WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				D4286FEF22B40A4500994C82 /* Interface.storyboard */,
+				D4286FF222B40A4500994C82 /* Assets.xcassets */,
+				D4286FF422B40A4500994C82 /* Info.plist */,
+			);
+			path = "Hawk WatchKit App";
+			sourceTree = "<group>";
+		};
+		D4286FFD22B40A4500994C82 /* Hawk WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D4286FFE22B40A4500994C82 /* InterfaceController.swift */,
+				D428700022B40A4500994C82 /* ExtensionDelegate.swift */,
+				D428700222B40A4500994C82 /* NotificationController.swift */,
+				D428700422B40A4600994C82 /* Assets.xcassets */,
+				D428700622B40A4600994C82 /* Info.plist */,
+				D428700722B40A4600994C82 /* PushNotificationPayload.apns */,
+			);
+			path = "Hawk WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4286FC122B40A4400994C82 /* Hawk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D428701222B40A4600994C82 /* Build configuration list for PBXNativeTarget "Hawk" */;
+			buildPhases = (
+				D4286FBE22B40A4400994C82 /* Sources */,
+				D4286FBF22B40A4400994C82 /* Frameworks */,
+				D4286FC022B40A4400994C82 /* Resources */,
+				D428701122B40A4600994C82 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4286FED22B40A4500994C82 /* PBXTargetDependency */,
+			);
+			name = Hawk;
+			productName = Hawk;
+			productReference = D4286FC222B40A4400994C82 /* Hawk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4286FD522B40A4400994C82 /* HawkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D428701522B40A4600994C82 /* Build configuration list for PBXNativeTarget "HawkTests" */;
+			buildPhases = (
+				D4286FD222B40A4400994C82 /* Sources */,
+				D4286FD322B40A4400994C82 /* Frameworks */,
+				D4286FD422B40A4400994C82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4286FD822B40A4400994C82 /* PBXTargetDependency */,
+			);
+			name = HawkTests;
+			productName = HawkTests;
+			productReference = D4286FD622B40A4400994C82 /* HawkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4286FE022B40A4400994C82 /* HawkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D428701822B40A4600994C82 /* Build configuration list for PBXNativeTarget "HawkUITests" */;
+			buildPhases = (
+				D4286FDD22B40A4400994C82 /* Sources */,
+				D4286FDE22B40A4400994C82 /* Frameworks */,
+				D4286FDF22B40A4400994C82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4286FE322B40A4400994C82 /* PBXTargetDependency */,
+			);
+			name = HawkUITests;
+			productName = HawkUITests;
+			productReference = D4286FE122B40A4400994C82 /* HawkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D4286FE922B40A4500994C82 /* Hawk WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D428700E22B40A4600994C82 /* Build configuration list for PBXNativeTarget "Hawk WatchKit App" */;
+			buildPhases = (
+				D4286FE822B40A4500994C82 /* Resources */,
+				D428700D22B40A4600994C82 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4286FFC22B40A4500994C82 /* PBXTargetDependency */,
+			);
+			name = "Hawk WatchKit App";
+			productName = "Hawk WatchKit App";
+			productReference = D4286FEA22B40A4500994C82 /* Hawk WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D4286FF822B40A4500994C82 /* Hawk WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D428700A22B40A4600994C82 /* Build configuration list for PBXNativeTarget "Hawk WatchKit Extension" */;
+			buildPhases = (
+				D4286FF522B40A4500994C82 /* Sources */,
+				D4286FF622B40A4500994C82 /* Frameworks */,
+				D4286FF722B40A4500994C82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hawk WatchKit Extension";
+			productName = "Hawk WatchKit Extension";
+			productReference = D4286FF922B40A4500994C82 /* Hawk WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4286FBA22B40A4400994C82 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Philip Mogull";
+				TargetAttributes = {
+					D4286FC122B40A4400994C82 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					D4286FD522B40A4400994C82 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = D4286FC122B40A4400994C82;
+					};
+					D4286FE022B40A4400994C82 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = D4286FC122B40A4400994C82;
+					};
+					D4286FE922B40A4500994C82 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					D4286FF822B40A4500994C82 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = D4286FBD22B40A4400994C82 /* Build configuration list for PBXProject "Hawk" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4286FB922B40A4400994C82;
+			productRefGroup = D4286FC322B40A4400994C82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4286FC122B40A4400994C82 /* Hawk */,
+				D4286FD522B40A4400994C82 /* HawkTests */,
+				D4286FE022B40A4400994C82 /* HawkUITests */,
+				D4286FE922B40A4500994C82 /* Hawk WatchKit App */,
+				D4286FF822B40A4500994C82 /* Hawk WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4286FC022B40A4400994C82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4286FD022B40A4400994C82 /* LaunchScreen.storyboard in Resources */,
+				D4286FCD22B40A4400994C82 /* Assets.xcassets in Resources */,
+				D4286FCB22B40A4400994C82 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4286FD422B40A4400994C82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4286FDF22B40A4400994C82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4286FE822B40A4500994C82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4286FF322B40A4500994C82 /* Assets.xcassets in Resources */,
+				D4286FF122B40A4500994C82 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4286FF722B40A4500994C82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D428700522B40A4600994C82 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4286FBE22B40A4400994C82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4286FC822B40A4400994C82 /* ViewController.swift in Sources */,
+				D4286FC622B40A4400994C82 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4286FD222B40A4400994C82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4286FDB22B40A4400994C82 /* HawkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4286FDD22B40A4400994C82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4286FE622B40A4400994C82 /* HawkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4286FF522B40A4500994C82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D428700322B40A4500994C82 /* NotificationController.swift in Sources */,
+				D428700122B40A4500994C82 /* ExtensionDelegate.swift in Sources */,
+				D4286FFF22B40A4500994C82 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4286FD822B40A4400994C82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4286FC122B40A4400994C82 /* Hawk */;
+			targetProxy = D4286FD722B40A4400994C82 /* PBXContainerItemProxy */;
+		};
+		D4286FE322B40A4400994C82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4286FC122B40A4400994C82 /* Hawk */;
+			targetProxy = D4286FE222B40A4400994C82 /* PBXContainerItemProxy */;
+		};
+		D4286FED22B40A4500994C82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4286FE922B40A4500994C82 /* Hawk WatchKit App */;
+			targetProxy = D4286FEC22B40A4500994C82 /* PBXContainerItemProxy */;
+		};
+		D4286FFC22B40A4500994C82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4286FF822B40A4500994C82 /* Hawk WatchKit Extension */;
+			targetProxy = D4286FFB22B40A4500994C82 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4286FC922B40A4400994C82 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4286FCA22B40A4400994C82 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4286FCE22B40A4400994C82 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4286FCF22B40A4400994C82 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D4286FEF22B40A4500994C82 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4286FF022B40A4500994C82 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D428700822B40A4600994C82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D428700922B40A4600994C82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D428700B22B40A4600994C82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				INFOPLIST_FILE = "Hawk WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.Hawk.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Debug;
+		};
+		D428700C22B40A4600994C82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				INFOPLIST_FILE = "Hawk WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.Hawk.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Release;
+		};
+		D428700F22B40A4600994C82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				IBSC_MODULE = Hawk_WatchKit_Extension;
+				INFOPLIST_FILE = "Hawk WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.Hawk.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Debug;
+		};
+		D428701022B40A4600994C82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				IBSC_MODULE = Hawk_WatchKit_Extension;
+				INFOPLIST_FILE = "Hawk WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.Hawk.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Release;
+		};
+		D428701322B40A4600994C82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				INFOPLIST_FILE = Hawk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.Hawk";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D428701422B40A4600994C82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				INFOPLIST_FILE = Hawk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.Hawk";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D428701622B40A4600994C82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				INFOPLIST_FILE = HawkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.HawkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hawk.app/Hawk";
+			};
+			name = Debug;
+		};
+		D428701722B40A4600994C82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				INFOPLIST_FILE = HawkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.HawkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hawk.app/Hawk";
+			};
+			name = Release;
+		};
+		D428701922B40A4600994C82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				INFOPLIST_FILE = HawkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.HawkUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Hawk;
+			};
+			name = Debug;
+		};
+		D428701A22B40A4600994C82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				INFOPLIST_FILE = HawkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.HawkUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Hawk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4286FBD22B40A4400994C82 /* Build configuration list for PBXProject "Hawk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D428700822B40A4600994C82 /* Debug */,
+				D428700922B40A4600994C82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D428700A22B40A4600994C82 /* Build configuration list for PBXNativeTarget "Hawk WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D428700B22B40A4600994C82 /* Debug */,
+				D428700C22B40A4600994C82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D428700E22B40A4600994C82 /* Build configuration list for PBXNativeTarget "Hawk WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D428700F22B40A4600994C82 /* Debug */,
+				D428701022B40A4600994C82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D428701222B40A4600994C82 /* Build configuration list for PBXNativeTarget "Hawk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D428701322B40A4600994C82 /* Debug */,
+				D428701422B40A4600994C82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D428701522B40A4600994C82 /* Build configuration list for PBXNativeTarget "HawkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D428701622B40A4600994C82 /* Debug */,
+				D428701722B40A4600994C82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D428701822B40A4600994C82 /* Build configuration list for PBXNativeTarget "HawkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D428701922B40A4600994C82 /* Debug */,
+				D428701A22B40A4600994C82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4286FBA22B40A4400994C82 /* Project object */;
+}
