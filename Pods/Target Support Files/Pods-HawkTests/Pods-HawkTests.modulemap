@@ -1,0 +1,6 @@
+framework module Pods_HawkTests {
+  umbrella header "Pods-HawkTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
