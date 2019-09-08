@@ -6,26 +6,156 @@
 //  Copyright © 2019 Philip Mogull. All rights reserved.
 //
 
+
 import WatchKit
 import Foundation
+import Dispatch
+import WatchConnectivity
+import os.log
+import HealthKit
 
+class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
+    // MARK: Properties
+    
+    let workoutManager = WorkoutManager()
+    var active = false
+    
+    var gravityStr = ""
+    var attitudeStr = ""
+    var userAccelStr = ""
+    var rotationRateStr = ""
+    
+    // MARK: Interface Properties
+    
+    @IBOutlet weak var titleLabel: WKInterfaceLabel!
+    @IBOutlet weak var userAccelLabel: WKInterfaceLabel!
+    
+    override init() {
+        super.init() 
+//        os_log("Test Log")
+        workoutManager.delegate = self
+    }
+    
 
-class InterfaceController: WKInterfaceController {
-
+    
+    override func didDeactivate() {
+        super.didDeactivate()
+        active = false
+    }
+    
+    
+    
+    @IBAction func start() {
+        titleLabel.setText("RECORDING")
+        workoutManager.startWorkout()
+    }
+    
+    @IBAction func stop() {
+        titleLabel.setText("Stopped Recording")
+        workoutManager.stopWorkout()
+    }
+    // WorkoutManagerDelegate
+    func didUpdateMotion(_ manager: WorkoutManager, gravityStr: String, rotationRateStr: String, userAccelStr: String, attitudeStr: String) {
+        DispatchQueue.main.async {
+            self.gravityStr = gravityStr
+            self.userAccelStr = userAccelStr
+            self.rotationRateStr = rotationRateStr
+            self.attitudeStr = attitudeStr
+            self.updateLabels();
+        }
+    }
+    
+    func updateLabels() {
+        if active {
+            //gravityLabel.setText(gravityStr)
+            userAccelLabel.setText(userAccelStr)
+            //rotationLabel.setText(rotationRateStr)
+            //attitudeLabel//.setText(attitudeStr)
+        }
+    }
+    
+    
+    //WATCHCONNECTIVITY
+    
+    private var session = WCSession.default
+    
+    //@IBOutlet weak var table: WKInterfaceTable!
+    
+    // MARK: - Items Table
+    
+    //private var items = [String]() {
+    //    didSet {
+    //        DispatchQueue.main.async {
+    //            self.updateTable()
+    //        }
+    //    }
+    //}
+    
+    func didCaptureStroke(_ strokeType: String) {
+        if isReachable() {
+            session.sendMessage(["request" : strokeType], replyHandler: { (response) in
+                os_log("Reply received")
+            }, errorHandler: { (error) in
+                print("Error sending message: %@", error)
+            })
+        } else {
+            print("iPhone is not reachable!!")
+        }
+    }
+    
+    
+    /// Updating all contents of WKInterfaceTable
+    private func updateTable() {
+  //      table.setNumberOfRows(items.count, withRowType: "Row")
+  //      for (i, item) in items.enumerated() {
+  //          if let row = table.rowController(at: i) as? Row {
+   //             row.lbl.setText(item)
+    //        }
+    //    }
+    }
+    
+    func activateWatchConnectivity () {
+        if isSuported() {
+            session.delegate = self
+            session.activate()
+        }
+        active = true
+    }
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         // Configure interface objects here.
-    }
+ 
+        }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        // 2: Initialization of session and set as delegate this InterfaceController if it's supported
+
+        updateLabels()
     }
     
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
+    
+    private func isSuported() -> Bool {
+        return WCSession.isSupported()
     }
+    
+    private func isReachable() -> Bool {
+        return session.isReachable
+    }
+    
+    // 3. With our session property which allows implement a method for start communication
+    // and manage the counterpart response
+}
 
+
+extension InterfaceController: WCSessionDelegate {
+    
+    // 4: Required stub for delegating session
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("activationDidCompleteWith activationState:\(activationState) error:\(String(describing: error))")
+    }
 }

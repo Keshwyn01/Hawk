@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import WatchConnectivity
+import FirebaseUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +18,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        FirebaseApp.configure()
         // Override point for customization after application launch.
+        
+        //Home controller not currently being used - is a UX driven design
+        //let homeController = HomeController(collectionViewLayout: UICollectionViewFlowLayout())
+        
+        /*
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        let viewController = ViewController()
+        window?.rootViewController = viewController
+        */
+        
+        
+        if !SessionHandler.shared.isSuported() {
+            print("WCSession not supported (f.e. on iPad).")
+        }
+        
+        
         return true
     }
 

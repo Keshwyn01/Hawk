@@ -3,13 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15FAEE7A406464392532B3BD /* Pods_Hawk_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 749ED36184327C705E05E916 /* Pods_Hawk_WatchKit_Extension.framework */; };
+		BF8BF55C7B5FB4A772B7914A /* Pods_HawkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BAAE94E89EAEF16B761B5FD /* Pods_HawkTests.framework */; };
+		C8C144CE09820A39B71F501F /* Pods_Hawk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8BD4DB32BAD5DD24716EC2 /* Pods_Hawk.framework */; };
+		CA071F58231E93B50008CA41 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA071F57231E93B50008CA41 /* TrainingViewController.swift */; };
+		CA071F5A23210FB50008CA41 /* TrainingSessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA071F5923210FB50008CA41 /* TrainingSessionHandler.swift */; };
+		CA1BD768231E626B007618FE /* TrainingSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1BD767231E626B007618FE /* TrainingSetupViewController.swift */; };
+		CA7B76A8231588D000856BB5 /* SegueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B76A7231588D000856BB5 /* SegueManager.swift */; };
+		CA8DBB4B2307E5C800103052 /* FormUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DBB4A2307E5C800103052 /* FormUtilities.swift */; };
+		CA8DBB4D2307EFA600103052 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA8DBB4C2307EFA600103052 /* GoogleService-Info.plist */; };
+		CAA0CB08230401EF0098331D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0CB06230401280098331D /* HomeViewController.swift */; };
+		CAA0CB0F230410D30098331D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0CB0E230410D30098331D /* Constants.swift */; };
+		CAA0CB11230410DD0098331D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0CB10230410DD0098331D /* Utilities.swift */; };
+		CAA0CB162306C3C80098331D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0CB152306C3C80098331D /* InitialViewController.swift */; };
+		CAA0CB182307DFC30098331D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0CB172307DFC30098331D /* LoginViewController.swift */; };
+		CAA0CB1A2307E39B0098331D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0CB192307E39B0098331D /* SignUpViewController.swift */; };
+		CADFC6282321194800CFEF9D /* MLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFC6272321194800CFEF9D /* MLConstants.swift */; };
+		CAF7D91122F185DB00B8BEA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF7D91022F185DB00B8BEA5 /* Main.storyboard */; };
+		D42135C422B4101400BD55D3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42135C322B4101400BD55D3 /* HealthKit.framework */; };
+		D42135C622B5073A00BD55D3 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42135C522B5073A00BD55D3 /* HomeController.swift */; };
 		D4286FC622B40A4400994C82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4286FC522B40A4400994C82 /* AppDelegate.swift */; };
 		D4286FC822B40A4400994C82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4286FC722B40A4400994C82 /* ViewController.swift */; };
-		D4286FCB22B40A4400994C82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4286FC922B40A4400994C82 /* Main.storyboard */; };
 		D4286FCD22B40A4400994C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4286FCC22B40A4400994C82 /* Assets.xcassets */; };
 		D4286FD022B40A4400994C82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4286FCE22B40A4400994C82 /* LaunchScreen.storyboard */; };
 		D4286FDB22B40A4400994C82 /* HawkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4286FDA22B40A4400994C82 /* HawkTests.swift */; };
@@ -22,6 +40,13 @@
 		D428700122B40A4500994C82 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D428700022B40A4500994C82 /* ExtensionDelegate.swift */; };
 		D428700322B40A4500994C82 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D428700222B40A4500994C82 /* NotificationController.swift */; };
 		D428700522B40A4600994C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D428700422B40A4600994C82 /* Assets.xcassets */; };
+		D428701C22B40A9B00994C82 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D428701B22B40A9B00994C82 /* WorkoutManager.swift */; };
+		D428701E22B40AC500994C82 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D428701D22B40AC500994C82 /* MotionManager.swift */; };
+		D428702022B40ADF00994C82 /* ShotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D428701F22B40ADF00994C82 /* ShotManager.swift */; };
+		D4A974A022CD109C00627358 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A9749F22CD109C00627358 /* SessionHandler.swift */; };
+		D4A974A622D215B600627358 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A974A522D215B600627358 /* HealthKit.framework */; };
+		DED73B9BE7BD7A4EB4AC3FED /* Pods_HawkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19468B2FFDAB9944943A4B2B /* Pods_HawkUITests.framework */; };
+		E5009847941D394C78A2FEB5 /* Pods_Hawk_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17453E3FE07A427A3B57AC96 /* Pods_Hawk_WatchKit_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,10 +106,40 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		17453E3FE07A427A3B57AC96 /* Pods_Hawk_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hawk_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19468B2FFDAB9944943A4B2B /* Pods_HawkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HawkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DD95C345119F220700D9006 /* Pods-Hawk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hawk.release.xcconfig"; path = "Target Support Files/Pods-Hawk/Pods-Hawk.release.xcconfig"; sourceTree = "<group>"; };
+		3EC501A5CE5F350B4BB82C02 /* Pods-Hawk WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hawk WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-Hawk WatchKit App/Pods-Hawk WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		4F4E5006EB7095C38A3EC52B /* Pods-HawkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HawkTests.debug.xcconfig"; path = "Target Support Files/Pods-HawkTests/Pods-HawkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		54A5BA0ACB37618E7B31A037 /* Pods-Hawk WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hawk WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-Hawk WatchKit Extension/Pods-Hawk WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		578C611789618310F3E4525D /* Pods-Hawk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hawk.debug.xcconfig"; path = "Target Support Files/Pods-Hawk/Pods-Hawk.debug.xcconfig"; sourceTree = "<group>"; };
+		749ED36184327C705E05E916 /* Pods_Hawk_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hawk_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		765EDD8B1FFB261882FFF5F2 /* Pods-HawkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HawkUITests.debug.xcconfig"; path = "Target Support Files/Pods-HawkUITests/Pods-HawkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7BAAE94E89EAEF16B761B5FD /* Pods_HawkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HawkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B5FEEAD138DCAD67A5A16D /* Pods-HawkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HawkTests.release.xcconfig"; path = "Target Support Files/Pods-HawkTests/Pods-HawkTests.release.xcconfig"; sourceTree = "<group>"; };
+		8F4CABC66D0A2E5882B922A1 /* Pods-Hawk WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hawk WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-Hawk WatchKit Extension/Pods-Hawk WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		BFFB2F62AA3FCFC076B20006 /* Pods-Hawk WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hawk WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-Hawk WatchKit App/Pods-Hawk WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		C6A8174B7E81C84C05D3A58D /* Pods-HawkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HawkUITests.release.xcconfig"; path = "Target Support Files/Pods-HawkUITests/Pods-HawkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CA071F57231E93B50008CA41 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		CA071F5923210FB50008CA41 /* TrainingSessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSessionHandler.swift; sourceTree = "<group>"; };
+		CA1BD767231E626B007618FE /* TrainingSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSetupViewController.swift; sourceTree = "<group>"; };
+		CA7B76A7231588D000856BB5 /* SegueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueManager.swift; sourceTree = "<group>"; };
+		CA8DBB4A2307E5C800103052 /* FormUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUtilities.swift; sourceTree = "<group>"; };
+		CA8DBB4C2307EFA600103052 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CAA0CB06230401280098331D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CAA0CB0E230410D30098331D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CAA0CB10230410DD0098331D /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		CAA0CB152306C3C80098331D /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		CAA0CB172307DFC30098331D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CAA0CB192307E39B0098331D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CADFC6272321194800CFEF9D /* MLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLConstants.swift; sourceTree = "<group>"; };
+		CAF7D91022F185DB00B8BEA5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D42135C122B4101400BD55D3 /* Hawk WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hawk WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		D42135C322B4101400BD55D3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		D42135C522B5073A00BD55D3 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		D4286FC222B40A4400994C82 /* Hawk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hawk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4286FC522B40A4400994C82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4286FC722B40A4400994C82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D4286FCA22B40A4400994C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4286FCC22B40A4400994C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4286FCF22B40A4400994C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4286FD122B40A4400994C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,13 +160,30 @@
 		D428700422B40A4600994C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D428700622B40A4600994C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D428700722B40A4600994C82 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D428701B22B40A9B00994C82 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		D428701D22B40AC500994C82 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		D428701F22B40ADF00994C82 /* ShotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotManager.swift; sourceTree = "<group>"; };
+		D4A9749F22CD109C00627358 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
+		D4A974A422D215B600627358 /* Hawk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hawk.entitlements; sourceTree = "<group>"; };
+		D4A974A522D215B600627358 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		FE8BD4DB32BAD5DD24716EC2 /* Pods_Hawk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hawk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		288822098F7FE327EEF53E77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5009847941D394C78A2FEB5 /* Pods_Hawk_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4286FBF22B40A4400994C82 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4A974A622D215B600627358 /* HealthKit.framework in Frameworks */,
+				C8C144CE09820A39B71F501F /* Pods_Hawk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF8BF55C7B5FB4A772B7914A /* Pods_HawkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DED73B9BE7BD7A4EB4AC3FED /* Pods_HawkUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,12 +207,77 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42135C422B4101400BD55D3 /* HealthKit.framework in Frameworks */,
+				15FAEE7A406464392532B3BD /* Pods_Hawk_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E9C19EB88FD71BE63998712 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				578C611789618310F3E4525D /* Pods-Hawk.debug.xcconfig */,
+				1DD95C345119F220700D9006 /* Pods-Hawk.release.xcconfig */,
+				3EC501A5CE5F350B4BB82C02 /* Pods-Hawk WatchKit App.debug.xcconfig */,
+				BFFB2F62AA3FCFC076B20006 /* Pods-Hawk WatchKit App.release.xcconfig */,
+				8F4CABC66D0A2E5882B922A1 /* Pods-Hawk WatchKit Extension.debug.xcconfig */,
+				54A5BA0ACB37618E7B31A037 /* Pods-Hawk WatchKit Extension.release.xcconfig */,
+				4F4E5006EB7095C38A3EC52B /* Pods-HawkTests.debug.xcconfig */,
+				84B5FEEAD138DCAD67A5A16D /* Pods-HawkTests.release.xcconfig */,
+				765EDD8B1FFB261882FFF5F2 /* Pods-HawkUITests.debug.xcconfig */,
+				C6A8174B7E81C84C05D3A58D /* Pods-HawkUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA1BD766231E6234007618FE /* Training Mode */ = {
+			isa = PBXGroup;
+			children = (
+				CA1BD767231E626B007618FE /* TrainingSetupViewController.swift */,
+				CA071F57231E93B50008CA41 /* TrainingViewController.swift */,
+				CA071F5923210FB50008CA41 /* TrainingSessionHandler.swift */,
+			);
+			path = "Training Mode";
+			sourceTree = "<group>";
+		};
+		CAA0CB0D230410BB0098331D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CAA0CB0E230410D30098331D /* Constants.swift */,
+				CAA0CB10230410DD0098331D /* Utilities.swift */,
+				CA8DBB4A2307E5C800103052 /* FormUtilities.swift */,
+				CA7B76A7231588D000856BB5 /* SegueManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CAA0CB12230693500098331D /* Authentication View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CAA0CB06230401280098331D /* HomeViewController.swift */,
+				CAA0CB172307DFC30098331D /* LoginViewController.swift */,
+				CAA0CB152306C3C80098331D /* InitialViewController.swift */,
+				CAA0CB192307E39B0098331D /* SignUpViewController.swift */,
+			);
+			path = "Authentication View Controllers";
+			sourceTree = "<group>";
+		};
+		D42135C222B4101400BD55D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4A974A522D215B600627358 /* HealthKit.framework */,
+				D42135C322B4101400BD55D3 /* HealthKit.framework */,
+				FE8BD4DB32BAD5DD24716EC2 /* Pods_Hawk.framework */,
+				17453E3FE07A427A3B57AC96 /* Pods_Hawk_WatchKit_App.framework */,
+				749ED36184327C705E05E916 /* Pods_Hawk_WatchKit_Extension.framework */,
+				7BAAE94E89EAEF16B761B5FD /* Pods_HawkTests.framework */,
+				19468B2FFDAB9944943A4B2B /* Pods_HawkUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D4286FB922B40A4400994C82 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +287,8 @@
 				D4286FEE22B40A4500994C82 /* Hawk WatchKit App */,
 				D4286FFD22B40A4500994C82 /* Hawk WatchKit Extension */,
 				D4286FC322B40A4400994C82 /* Products */,
+				D42135C222B4101400BD55D3 /* Frameworks */,
+				5E9C19EB88FD71BE63998712 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,11 +307,18 @@
 		D4286FC422B40A4400994C82 /* Hawk */ = {
 			isa = PBXGroup;
 			children = (
+				CA1BD766231E6234007618FE /* Training Mode */,
+				D4A974A422D215B600627358 /* Hawk.entitlements */,
 				D4286FC522B40A4400994C82 /* AppDelegate.swift */,
+				CAA0CB12230693500098331D /* Authentication View Controllers */,
+				D4A9749F22CD109C00627358 /* SessionHandler.swift */,
 				D4286FC722B40A4400994C82 /* ViewController.swift */,
-				D4286FC922B40A4400994C82 /* Main.storyboard */,
-				D4286FCC22B40A4400994C82 /* Assets.xcassets */,
+				D42135C522B5073A00BD55D3 /* HomeController.swift */,
+				CAF7D91022F185DB00B8BEA5 /* Main.storyboard */,
 				D4286FCE22B40A4400994C82 /* LaunchScreen.storyboard */,
+				CAA0CB0D230410BB0098331D /* Helpers */,
+				D4286FCC22B40A4400994C82 /* Assets.xcassets */,
+				CA8DBB4C2307EFA600103052 /* GoogleService-Info.plist */,
 				D4286FD122B40A4400994C82 /* Info.plist */,
 			);
 			path = Hawk;
@@ -207,12 +355,17 @@
 		D4286FFD22B40A4500994C82 /* Hawk WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D42135C122B4101400BD55D3 /* Hawk WatchKit Extension.entitlements */,
 				D4286FFE22B40A4500994C82 /* InterfaceController.swift */,
+				D428701B22B40A9B00994C82 /* WorkoutManager.swift */,
 				D428700022B40A4500994C82 /* ExtensionDelegate.swift */,
+				D428701D22B40AC500994C82 /* MotionManager.swift */,
 				D428700222B40A4500994C82 /* NotificationController.swift */,
 				D428700422B40A4600994C82 /* Assets.xcassets */,
 				D428700622B40A4600994C82 /* Info.plist */,
 				D428700722B40A4600994C82 /* PushNotificationPayload.apns */,
+				D428701F22B40ADF00994C82 /* ShotManager.swift */,
+				CADFC6272321194800CFEF9D /* MLConstants.swift */,
 			);
 			path = "Hawk WatchKit Extension";
 			sourceTree = "<group>";
@@ -224,10 +377,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D428701222B40A4600994C82 /* Build configuration list for PBXNativeTarget "Hawk" */;
 			buildPhases = (
+				98ED6FF5CFA5C5CBF71932D5 /* [CP] Check Pods Manifest.lock */,
 				D4286FBE22B40A4400994C82 /* Sources */,
 				D4286FBF22B40A4400994C82 /* Frameworks */,
 				D4286FC022B40A4400994C82 /* Resources */,
 				D428701122B40A4600994C82 /* Embed Watch Content */,
+				013A211DD413F9E7D0AC5734 /* [CP] Embed Pods Frameworks */,
+				F43F56AB3A934542D0C0BCF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,6 +399,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D428701522B40A4600994C82 /* Build configuration list for PBXNativeTarget "HawkTests" */;
 			buildPhases = (
+				F317D3F9B457D4C40578B261 /* [CP] Check Pods Manifest.lock */,
 				D4286FD222B40A4400994C82 /* Sources */,
 				D4286FD322B40A4400994C82 /* Frameworks */,
 				D4286FD422B40A4400994C82 /* Resources */,
@@ -261,6 +418,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D428701822B40A4600994C82 /* Build configuration list for PBXNativeTarget "HawkUITests" */;
 			buildPhases = (
+				4BCB3D0C48CE95190A3DD712 /* [CP] Check Pods Manifest.lock */,
 				D4286FDD22B40A4400994C82 /* Sources */,
 				D4286FDE22B40A4400994C82 /* Frameworks */,
 				D4286FDF22B40A4400994C82 /* Resources */,
@@ -279,8 +437,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D428700E22B40A4600994C82 /* Build configuration list for PBXNativeTarget "Hawk WatchKit App" */;
 			buildPhases = (
+				679D4E6EB6FF45884E4A6164 /* [CP] Check Pods Manifest.lock */,
 				D4286FE822B40A4500994C82 /* Resources */,
 				D428700D22B40A4600994C82 /* Embed App Extensions */,
+				288822098F7FE327EEF53E77 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,6 +456,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D428700A22B40A4600994C82 /* Build configuration list for PBXNativeTarget "Hawk WatchKit Extension" */;
 			buildPhases = (
+				76E89A53CC801BB2D3ABB5BF /* [CP] Check Pods Manifest.lock */,
 				D4286FF522B40A4500994C82 /* Sources */,
 				D4286FF622B40A4500994C82 /* Frameworks */,
 				D4286FF722B40A4500994C82 /* Resources */,
@@ -317,10 +478,18 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = "Philip Mogull";
+				ORGANIZATIONNAME = "Keshwyn Annauth";
 				TargetAttributes = {
 					D4286FC122B40A4400994C82 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					D4286FD522B40A4400994C82 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -335,6 +504,11 @@
 					};
 					D4286FF822B40A4500994C82 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -365,9 +539,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF7D91122F185DB00B8BEA5 /* Main.storyboard in Resources */,
+				CA8DBB4D2307EFA600103052 /* GoogleService-Info.plist in Resources */,
 				D4286FD022B40A4400994C82 /* LaunchScreen.storyboard in Resources */,
 				D4286FCD22B40A4400994C82 /* Assets.xcassets in Resources */,
-				D4286FCB22B40A4400994C82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,13 +579,173 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		013A211DD413F9E7D0AC5734 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hawk/Pods-Hawk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hawk/Pods-Hawk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hawk/Pods-Hawk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BCB3D0C48CE95190A3DD712 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HawkUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		679D4E6EB6FF45884E4A6164 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hawk WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76E89A53CC801BB2D3ABB5BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hawk WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98ED6FF5CFA5C5CBF71932D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hawk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F317D3F9B457D4C40578B261 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HawkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F43F56AB3A934542D0C0BCF0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hawk/Pods-Hawk-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hawk/Pods-Hawk-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hawk/Pods-Hawk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D4286FBE22B40A4400994C82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA0CB162306C3C80098331D /* InitialViewController.swift in Sources */,
+				CA1BD768231E626B007618FE /* TrainingSetupViewController.swift in Sources */,
 				D4286FC822B40A4400994C82 /* ViewController.swift in Sources */,
+				D4A974A022CD109C00627358 /* SessionHandler.swift in Sources */,
+				CAA0CB11230410DD0098331D /* Utilities.swift in Sources */,
+				CAA0CB1A2307E39B0098331D /* SignUpViewController.swift in Sources */,
+				CA7B76A8231588D000856BB5 /* SegueManager.swift in Sources */,
 				D4286FC622B40A4400994C82 /* AppDelegate.swift in Sources */,
+				CAA0CB08230401EF0098331D /* HomeViewController.swift in Sources */,
+				CA071F5A23210FB50008CA41 /* TrainingSessionHandler.swift in Sources */,
+				D42135C622B5073A00BD55D3 /* HomeController.swift in Sources */,
+				CA071F58231E93B50008CA41 /* TrainingViewController.swift in Sources */,
+				CA8DBB4B2307E5C800103052 /* FormUtilities.swift in Sources */,
+				CAA0CB182307DFC30098331D /* LoginViewController.swift in Sources */,
+				CAA0CB0F230410D30098331D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +770,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D428700322B40A4500994C82 /* NotificationController.swift in Sources */,
+				D428702022B40ADF00994C82 /* ShotManager.swift in Sources */,
+				D428701E22B40AC500994C82 /* MotionManager.swift in Sources */,
+				D428701C22B40A9B00994C82 /* WorkoutManager.swift in Sources */,
+				CADFC6282321194800CFEF9D /* MLConstants.swift in Sources */,
 				D428700122B40A4500994C82 /* ExtensionDelegate.swift in Sources */,
 				D4286FFF22B40A4500994C82 /* InterfaceController.swift in Sources */,
 			);
@@ -466,14 +805,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D4286FC922B40A4400994C82 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4286FCA22B40A4400994C82 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D4286FCE22B40A4400994C82 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -611,17 +942,19 @@
 		};
 		D428700B22B40A4600994C82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F4CABC66D0A2E5882B922A1 /* Pods-Hawk WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Hawk WatchKit Extension/Hawk WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				DEVELOPMENT_TEAM = 8P3BFM6UQ7;
 				INFOPLIST_FILE = "Hawk WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.Hawk.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshwynannauth.Hawk.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -633,17 +966,19 @@
 		};
 		D428700C22B40A4600994C82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54A5BA0ACB37618E7B31A037 /* Pods-Hawk WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Hawk WatchKit Extension/Hawk WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				DEVELOPMENT_TEAM = 8P3BFM6UQ7;
 				INFOPLIST_FILE = "Hawk WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.Hawk.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshwynannauth.Hawk.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -655,14 +990,15 @@
 		};
 		D428700F22B40A4600994C82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EC501A5CE5F350B4BB82C02 /* Pods-Hawk WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				DEVELOPMENT_TEAM = 8P3BFM6UQ7;
 				IBSC_MODULE = Hawk_WatchKit_Extension;
 				INFOPLIST_FILE = "Hawk WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.Hawk.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshwynannauth.Hawk.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -674,14 +1010,15 @@
 		};
 		D428701022B40A4600994C82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFFB2F62AA3FCFC076B20006 /* Pods-Hawk WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				DEVELOPMENT_TEAM = 8P3BFM6UQ7;
 				IBSC_MODULE = Hawk_WatchKit_Extension;
 				INFOPLIST_FILE = "Hawk WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.Hawk.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshwynannauth.Hawk.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -693,16 +1030,18 @@
 		};
 		D428701322B40A4600994C82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 578C611789618310F3E4525D /* Pods-Hawk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hawk/Hawk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				DEVELOPMENT_TEAM = 8P3BFM6UQ7;
 				INFOPLIST_FILE = Hawk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.Hawk";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshwynannauth.Hawk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -711,16 +1050,18 @@
 		};
 		D428701422B40A4600994C82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DD95C345119F220700D9006 /* Pods-Hawk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hawk/Hawk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				DEVELOPMENT_TEAM = 8P3BFM6UQ7;
 				INFOPLIST_FILE = Hawk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.Hawk";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshwynannauth.Hawk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -729,18 +1070,19 @@
 		};
 		D428701622B40A4600994C82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F4E5006EB7095C38A3EC52B /* Pods-HawkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				DEVELOPMENT_TEAM = 8P3BFM6UQ7;
 				INFOPLIST_FILE = HawkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.HawkTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshwynannauth.HawkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -750,18 +1092,19 @@
 		};
 		D428701722B40A4600994C82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84B5FEEAD138DCAD67A5A16D /* Pods-HawkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				DEVELOPMENT_TEAM = 8P3BFM6UQ7;
 				INFOPLIST_FILE = HawkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.HawkTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshwynannauth.HawkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -771,17 +1114,19 @@
 		};
 		D428701922B40A4600994C82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 765EDD8B1FFB261882FFF5F2 /* Pods-HawkUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				DEVELOPMENT_TEAM = 8P3BFM6UQ7;
 				INFOPLIST_FILE = HawkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.HawkUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshwynannauth.HawkUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -791,17 +1136,19 @@
 		};
 		D428701A22B40A4600994C82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6A8174B7E81C84C05D3A58D /* Pods-HawkUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38Z26A3D4X;
+				DEVELOPMENT_TEAM = 8P3BFM6UQ7;
 				INFOPLIST_FILE = HawkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Philip-Mogull.HawkUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshwynannauth.HawkUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

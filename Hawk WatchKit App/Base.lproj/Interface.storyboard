@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Hawk_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="aEL-YG-WHt">
+                            <items>
+                                <button width="67" alignment="left" title="Start" id="enF-N2-mAK">
+                                    <connections>
+                                        <action selector="start" destination="AgC-eL-Hgc" id="IEU-Me-6fV"/>
+                                    </connections>
+                                </button>
+                                <button width="66" height="37" alignment="left" title="Stop" id="AWT-RP-eD9">
+                                    <connections>
+                                        <action selector="stop" destination="AgC-eL-Hgc" id="CJd-cH-1IE"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <label alignment="left" text="Recording" id="c8C-iJ-50M"/>
+                        <label alignment="left" text="Label" id="v5c-3u-k2Q"/>
+                        <button width="1" alignment="left" title="Send Message" id="x97-J7-aTD">
+                            <connections>
+                                <action selector="sendMessage" destination="AgC-eL-Hgc" id="rFA-RW-VsC"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="titleLabel" destination="c8C-iJ-50M" id="Ce1-Xa-E54"/>
+                        <outlet property="userAccelLabel" destination="v5c-3u-k2Q" id="odb-2S-slM"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -32,14 +64,14 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Hawk_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="Hawk_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>

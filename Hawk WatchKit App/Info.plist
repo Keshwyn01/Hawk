@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>Philip-Mogull.Hawk</string>
+	<string>com.keshwynannauth.Hawk</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
