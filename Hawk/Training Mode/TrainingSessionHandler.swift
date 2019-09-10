@@ -53,6 +53,7 @@ class TrainingSessionHandler : NSObject, WCSessionDelegate {
     
     // MARK: - WCSessionDelegate
     
+    
     // 4: Required protocols
     
     // a
@@ -83,12 +84,13 @@ class TrainingSessionHandler : NSObject, WCSessionDelegate {
     ///   - session: session
     ///   - message: message received
     ///   - replyHandler: response handler
+    
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         
-        counter = counter + 1
+       // counter = counter + 1
         
         let newMessage = message["request"]
-        sessionHandlerDelegate?.updateCount()
+      // sessionHandlerDelegate?.updateCount()
         
         
  //     When message is received by phone, send information/ store information to Firestore
@@ -97,10 +99,37 @@ class TrainingSessionHandler : NSObject, WCSessionDelegate {
             "date": Timestamp(date: Date()),
         ]
         
-        sessionHandlerDelegate?.uploadData(docData)
+      // sessionHandlerDelegate?.uploadData(docData)
         
         if message["request"] as? String == "version" {
             replyHandler(["version" : "\(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") ?? "No version")"])
         }
     }
+    
+    // Called when a userInfo is received.
+    //
+    
+    
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any]) {
+
+        DispatchQueue.main.async {
+            //let data=userInfo["data"]
+            os_log("Data Received")
+            self.sessionHandlerDelegate?.updateCount()
+            self.sessionHandlerDelegate?.uploadData(userInfo)
+            
+            //os_log(data as! StaticString)
+        }
+
+        
+    }
+    
+
 }
+    
+
+
+
+    
+    
+

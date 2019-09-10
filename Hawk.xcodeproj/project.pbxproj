@@ -22,6 +22,8 @@
 		CAA0CB162306C3C80098331D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0CB152306C3C80098331D /* InitialViewController.swift */; };
 		CAA0CB182307DFC30098331D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0CB172307DFC30098331D /* LoginViewController.swift */; };
 		CAA0CB1A2307E39B0098331D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0CB192307E39B0098331D /* SignUpViewController.swift */; };
+		CAB7BFC32327D28D00683131 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB7BFC22327D28D00683131 /* WatchSessionManager.swift */; };
+		CAB7BFC42327D28D00683131 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB7BFC22327D28D00683131 /* WatchSessionManager.swift */; };
 		CADFC6282321194800CFEF9D /* MLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFC6272321194800CFEF9D /* MLConstants.swift */; };
 		CAF7D91122F185DB00B8BEA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF7D91022F185DB00B8BEA5 /* Main.storyboard */; };
 		D42135C422B4101400BD55D3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42135C322B4101400BD55D3 /* HealthKit.framework */; };
@@ -132,6 +134,9 @@
 		CAA0CB152306C3C80098331D /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		CAA0CB172307DFC30098331D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CAA0CB192307E39B0098331D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CAB7BFC22327D28D00683131 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
+		CAB7BFC52327D3AF00683131 /* Pods_Hawk_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Hawk_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAB7BFC72327D4AD00683131 /* Pods_Hawk_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Hawk_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADFC6272321194800CFEF9D /* MLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLConstants.swift; sourceTree = "<group>"; };
 		CAF7D91022F185DB00B8BEA5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D42135C122B4101400BD55D3 /* Hawk WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hawk WatchKit Extension.entitlements"; sourceTree = "<group>"; };
@@ -242,6 +247,14 @@
 			path = "Training Mode";
 			sourceTree = "<group>";
 		};
+		CA3A97D92327D0A20019295B /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				CAB7BFC22327D28D00683131 /* WatchSessionManager.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		CAA0CB0D230410BB0098331D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +280,8 @@
 		D42135C222B4101400BD55D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAB7BFC72327D4AD00683131 /* Pods_Hawk_WatchKit_App.framework */,
+				CAB7BFC52327D3AF00683131 /* Pods_Hawk_WatchKit_App.framework */,
 				D4A974A522D215B600627358 /* HealthKit.framework */,
 				D42135C322B4101400BD55D3 /* HealthKit.framework */,
 				FE8BD4DB32BAD5DD24716EC2 /* Pods_Hawk.framework */,
@@ -284,6 +299,7 @@
 				D4286FC422B40A4400994C82 /* Hawk */,
 				D4286FD922B40A4400994C82 /* HawkTests */,
 				D4286FE422B40A4400994C82 /* HawkUITests */,
+				CA3A97D92327D0A20019295B /* Commons */,
 				D4286FEE22B40A4500994C82 /* Hawk WatchKit App */,
 				D4286FFD22B40A4500994C82 /* Hawk WatchKit Extension */,
 				D4286FC322B40A4400994C82 /* Products */,
@@ -741,6 +757,7 @@
 				D4286FC622B40A4400994C82 /* AppDelegate.swift in Sources */,
 				CAA0CB08230401EF0098331D /* HomeViewController.swift in Sources */,
 				CA071F5A23210FB50008CA41 /* TrainingSessionHandler.swift in Sources */,
+				CAB7BFC32327D28D00683131 /* WatchSessionManager.swift in Sources */,
 				D42135C622B5073A00BD55D3 /* HomeController.swift in Sources */,
 				CA071F58231E93B50008CA41 /* TrainingViewController.swift in Sources */,
 				CA8DBB4B2307E5C800103052 /* FormUtilities.swift in Sources */,
@@ -771,6 +788,7 @@
 			files = (
 				D428700322B40A4500994C82 /* NotificationController.swift in Sources */,
 				D428702022B40ADF00994C82 /* ShotManager.swift in Sources */,
+				CAB7BFC42327D28D00683131 /* WatchSessionManager.swift in Sources */,
 				D428701E22B40AC500994C82 /* MotionManager.swift in Sources */,
 				D428701C22B40A9B00994C82 /* WorkoutManager.swift in Sources */,
 				CADFC6282321194800CFEF9D /* MLConstants.swift in Sources */,

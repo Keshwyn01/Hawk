@@ -14,8 +14,6 @@ import FirebaseFirestore
 class TrainingViewController: UIViewController, TrainingSessionHandlerDelegate  {
 
     
-    
- 
     @IBOutlet weak var courtLabel: UILabel!
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!

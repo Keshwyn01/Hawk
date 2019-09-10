@@ -29,6 +29,7 @@ extension Date {
 
 
 class MotionManager {
+
     // MARK: Properties
     
     var previousTimeStamp: Int64 = 0;
@@ -270,13 +271,18 @@ class MotionManager {
     
     func storeExportString (_ exportString: String) {
         let timestamp = Date().millisecondsSince1970
-        os_log("Stroke Data: %@, %@", String(timestamp), exportString)}
+        os_log("Stroke Data Exported")
+        
+    }
     
     // MARK: Data and Delegate Management
     
     func updateMetricsDelegate() {
         delegate?.didUpdateMotion(self,gravityStr:gravityStr, rotationRateStr: rotationRateStr, userAccelStr: userAccelStr, attitudeStr: attitudeStr)
-    }
 }
+    
+}
+
+
 
 

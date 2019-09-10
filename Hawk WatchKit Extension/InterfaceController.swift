@@ -13,6 +13,7 @@ import Dispatch
 import WatchConnectivity
 import os.log
 import HealthKit
+import UIKit
 
 class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
     // MARK: Properties
@@ -36,12 +37,13 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
         workoutManager.delegate = self
     }
     
-
     
     override func didDeactivate() {
         super.didDeactivate()
         active = false
     }
+    
+    
     
     
     
@@ -92,15 +94,34 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
     //}
     
     func didCaptureStroke(_ strokeType: String) {
+       
+        
+        guard session.activationState == .activated else {
+            os_log("Session not active!")
+            return
+                }
+        
+        let dateFormatter = DateFormatter()
+                dateFormatter.timeStyle = .medium
+                let timeString = dateFormatter.string(from: Date())
+        
+        let data = ["data" : strokeType,
+                    "time": timeString]
+        session.transferUserInfo(data)
+        
+        os_log("Data Info Sent")
+        
+        
         if isReachable() {
-            session.sendMessage(["request" : strokeType], replyHandler: { (response) in
-                os_log("Reply received")
-            }, errorHandler: { (error) in
-                print("Error sending message: %@", error)
-            })
-        } else {
+           // session.sendMessage(["request" : strokeType], replyHandler: { (response) in
+              //  os_log("Reply received")
+           // }, errorHandler: { (error) in
+             //   print("Error sending message: %@", error)
+          //  })
+        }else {
             print("iPhone is not reachable!!")
         }
+        
     }
     
     
@@ -158,4 +179,5 @@ extension InterfaceController: WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         print("activationDidCompleteWith activationState:\(activationState) error:\(String(describing: error))")
     }
+    
 }
