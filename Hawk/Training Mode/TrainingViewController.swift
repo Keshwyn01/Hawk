@@ -11,9 +11,9 @@ import os.log
 import FirebaseAuth
 import FirebaseFirestore
 
-class TrainingViewController: UIViewController, TrainingSessionHandlerDelegate  {
 
-    
+class TrainingViewController: UIViewController, TrainingSessionHandlerDelegate  {
+  
     @IBOutlet weak var courtLabel: UILabel!
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -28,45 +28,64 @@ class TrainingViewController: UIViewController, TrainingSessionHandlerDelegate  
     
     let user = Auth.auth().currentUser
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        TrainingSessionHandler.shared.sessionHandlerDelegate = self
+        updateTrainingConditions()
+    }
+    
+    func saveFile(_ fileURL: URL) {
         
-        func updateCount() {
-            guard let stroke = trainingCondition?[0] else{
-                return
+        var strokeData = ""
+        do {
+            strokeData = try String(contentsOfFile: fileURL.path)
+            } catch {
+                print(error.localizedDescription)
             }
-            DispatchQueue.main.async {
-                 self.count = self.count + 1
-                self.categoryLabel.text = "\(stroke) count = \(self.count)"
-                os_log("Message Recieved By iPhone")
-            }
+        
+        let docData = ["data" : strokeData]
+        uploadData(docData)
+        
+    }
+    
+    func updateCount() {
+        guard let stroke = trainingCondition?[0] else{
+            return
         }
+        DispatchQueue.main.async {
+            self.count = self.count + 1
+            self.categoryLabel.text = "\(stroke) count = \(self.count)"
+            //os_log("Message Recieved By iPhone")
+        }
+    }
     
     func uploadData(_ docData: [String : Any]) {
+        
         DispatchQueue.main.async {
                 
             guard let currentUser = self.user, let dataLocation = self.collectionName else {
                 os_log("No user logged in")
                 return
             }
-                    var strokeData = docData
-                    strokeData["UID"] = currentUser.uid
-                    strokeData["User Name"] = currentUser.displayName
-                    strokeData ["Court Type"] = self.courtLabel.text
-                    strokeData ["Weather"] = self.weatherLabel.text
+            var strokeData = docData
+            strokeData["UID"] = currentUser.uid
+            strokeData["User Name"] = currentUser.displayName
+            strokeData ["Court Type"] = self.courtLabel.text
+            strokeData ["Weather"] = self.weatherLabel.text
+            strokeData["Time"] = Timestamp(date: Date())
             
-                    os_log("test test test")
+            //os_log("test test test")
             
-                    let  db=Firestore.firestore()
-                    db.collection("training").document(dataLocation).collection("data").addDocument(data: strokeData) { (error) in
-                        
-                        if error != nil{
-                            // Show error message
+            let  db=Firestore.firestore()
+            
+            db.collection("training").document(dataLocation).collection("data").addDocument(data: strokeData) { (error) in
+                            if error != nil{
                             os_log("Error saving user data to database")
                             }
-                        }
-                }
+                    }
         }
+    }
     
-
     func updateTrainingConditions() {
         
         guard let conditions = trainingCondition else {
@@ -99,17 +118,7 @@ class TrainingViewController: UIViewController, TrainingSessionHandlerDelegate  
                 }
     }
         
-    
-    override func viewDidLoad() {
-            super.viewDidLoad()
-        
-        TrainingSessionHandler.shared.sessionHandlerDelegate = self
-        
-        updateTrainingConditions()
-        
-        
-        }
-    }
+}
 
 
 

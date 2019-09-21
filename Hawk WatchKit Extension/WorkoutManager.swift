@@ -20,17 +20,19 @@ protocol WorkoutManagerDelegate: class {
     
     func didCaptureStroke(_ strokeType: String)
     
+    
     func activateWatchConnectivity()
 }
 
 class WorkoutManager: MotionManagerDelegate {
+    
     
     func didCaptureStroke(_ strokeType: String) {
         delegate?.didCaptureStroke(strokeType)
     }
     
     let motionManager = MotionManager()
-    let healthStore = HKHealthStore()
+   let healthStore = HKHealthStore()
     
     weak var delegate: WorkoutManagerDelegate?
     var session: HKWorkoutSession?
@@ -47,7 +49,7 @@ class WorkoutManager: MotionManagerDelegate {
             os_log("Problemos with healthkit")
         }
         
-        let healthStore = HKHealthStore()
+       // let healthStore = HKHealthStore()
         // Configure the workout session.
         
         

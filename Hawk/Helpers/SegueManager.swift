@@ -41,6 +41,20 @@ class SegueManager{
 
         }
     
+    static func transitionToPlay(_ view : UIView){
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        guard let playViewController = mainStoryboard.instantiateViewController(withIdentifier: "PlayVC") as? ViewController else {
+            print("Could not instantiate view controller")
+            return
+
+        }
+        view.window?.rootViewController = playViewController
+        view.window?.makeKeyAndVisible()
+
+        }
+    
     static func transitionToNav(_ view : UIView){
         
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)

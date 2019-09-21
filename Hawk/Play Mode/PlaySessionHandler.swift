@@ -1,11 +1,10 @@
 //
-//  TrainingSessionHandler.swift
+//  PlaySessionHandler.swift
 //  Hawk
 //
-//  Created by Keshwyn Annauth on 05/09/2019.
+//  Created by Keshwyn Annauth on 20/09/2019.
 //  Copyright © 2019 Keshwyn Annauth. All rights reserved.
 //
-
 
 import Foundation
 import WatchConnectivity
@@ -15,21 +14,20 @@ import FirebaseFirestore
 
 
 
-protocol TrainingSessionHandlerDelegate {
+protocol PlaySessionHandlerDelegate {
     func updateCount ()
-    func uploadData (_ docData: [String: Any])
-    func saveFile (_ fileURL: URL)
+    func analyseStroke(_ fileURL: URL)
     
 }
 
-class TrainingSessionHandler : NSObject, WCSessionDelegate {
+class PlaySessionHandler : NSObject, WCSessionDelegate {
     
     var counter = 0
     
     // 1: Singleton
-    static let shared = TrainingSessionHandler()
+    static let shared = PlaySessionHandler()
     
-    var sessionHandlerDelegate: TrainingSessionHandlerDelegate?
+    var sessionHandlerDelegate: PlaySessionHandlerDelegate?
     
     
     // 2: Property to manage session
@@ -97,7 +95,7 @@ class TrainingSessionHandler : NSObject, WCSessionDelegate {
         os_log("Data Received")
         
         self.sessionHandlerDelegate?.updateCount()
-        self.sessionHandlerDelegate?.saveFile(file.fileURL)
+        self.sessionHandlerDelegate?.analyseStroke(file.fileURL)
         
     }
     
@@ -106,7 +104,7 @@ class TrainingSessionHandler : NSObject, WCSessionDelegate {
         DispatchQueue.main.async {
             os_log("Data Received")
             self.sessionHandlerDelegate?.updateCount()
-            self.sessionHandlerDelegate?.uploadData(userInfo)
+            //self.sessionHandlerDelegate?.uploadData(userInfo)
         }
 
         
@@ -115,9 +113,3 @@ class TrainingSessionHandler : NSObject, WCSessionDelegate {
 
 }
     
-
-
-
-    
-    
-

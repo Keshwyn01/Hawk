@@ -16,9 +16,15 @@ import HealthKit
 import UIKit
 
 class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
+    
+    
     // MARK: Properties
+    //let fm = FileManager.default
+    let tempDirectoryURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+    var urlList = [URL]()
     
     let workoutManager = WorkoutManager()
+    
     var active = false
     
     var gravityStr = ""
@@ -45,16 +51,33 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
     
     
     
-    
-    
     @IBAction func start() {
         titleLabel.setText("RECORDING")
+        
         workoutManager.startWorkout()
+// added because when start workout first called, app stops working after screen goes to sleep. When stopworkout called followed by start, screen sleep issue if fixed - this is a temporary fix, need to understand why this issue arises
+      workoutManager.stopWorkout()
+       workoutManager.startWorkout()
     }
     
     @IBAction func stop() {
         titleLabel.setText("Stopped Recording")
+        
+        let fileTrans=session.outstandingFileTransfers
+        print(fileTrans.count)
+        if session.hasContentPending {
+            titleLabel.setText("Data Transfer Pending")
+            
+            repeat {
+                
+            } while session.hasContentPending
+        }
+        
+        clearTempFolder()
+        titleLabel.setText("Ready")
+        
         workoutManager.stopWorkout()
+        
     }
     // WorkoutManagerDelegate
     func didUpdateMotion(_ manager: WorkoutManager, gravityStr: String, rotationRateStr: String, userAccelStr: String, attitudeStr: String) {
@@ -76,49 +99,58 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
         }
     }
     
+    func clearTempFolder() {
+        
+        titleLabel.setText("Clearing Temp Folder")
+        for url in urlList {
+        
+        do{
+        try FileManager.default.removeItem(at: url)
+        } catch {
+        print(error.localizedDescription)
+        }
+        }
+    }
+    
     
     //WATCHCONNECTIVITY
     
     private var session = WCSession.default
     
-    //@IBOutlet weak var table: WKInterfaceTable!
     
     // MARK: - Items Table
     
-    //private var items = [String]() {
-    //    didSet {
-    //        DispatchQueue.main.async {
-    //            self.updateTable()
-    //        }
-    //    }
-    //}
     
     func didCaptureStroke(_ strokeType: String) {
-       
         
+        
+        let tempFileName = ProcessInfo().globallyUniqueString;
+        let tempFileURL = tempDirectoryURL.appendingPathComponent(tempFileName)
+        
+        do{
+        try strokeType.write(to: tempFileURL, atomically: true, encoding: String.Encoding.utf8)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        urlList.append(tempFileURL)
+    
         guard session.activationState == .activated else {
             os_log("Session not active!")
             return
-                }
+        }
         
-        let dateFormatter = DateFormatter()
-                dateFormatter.timeStyle = .medium
-                let timeString = dateFormatter.string(from: Date())
+        session.transferFile(tempFileURL, metadata: nil)
         
-        let data = ["data" : strokeType,
-                    "time": timeString]
-        session.transferUserInfo(data)
+        //let data = ["data" : strokeType]
+        //session.transferUserInfo(data)
         
         os_log("Data Info Sent")
         
         
         if isReachable() {
-           // session.sendMessage(["request" : strokeType], replyHandler: { (response) in
-              //  os_log("Reply received")
-           // }, errorHandler: { (error) in
-             //   print("Error sending message: %@", error)
-          //  })
-        }else {
+            
+        } else {
             print("iPhone is not reachable!!")
         }
         

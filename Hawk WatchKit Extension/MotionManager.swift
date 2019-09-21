@@ -19,6 +19,8 @@ protocol MotionManagerDelegate: class {
     func didUpdateMotion(_ manager: MotionManager, gravityStr: String, rotationRateStr: String, userAccelStr: String, attitudeStr: String)
     
     func didCaptureStroke(_ strokeType: String)
+    
+    
 }
 
 extension Date {
@@ -116,8 +118,13 @@ class MotionManager {
         
         if shotData.hasShotBeenStored == true {
             let exportString = createExportString()
-            storeExportString(exportString)
             shotData.reset()
+            
+            DispatchQueue.main.async {
+            self.delegate?.didCaptureStroke(exportString)
+            }
+            //storeExportString(exportString)
+            
         }
         
         
@@ -139,7 +146,6 @@ class MotionManager {
     }
     
     func createExportString () -> String {
-        
         var exportString = ""
         //let totalData = shotData.leadingSignalXData + shotData.trailingSignalXData + shotData.leadingSignalYData + shotData.trailingSignalYData + shotData.leadingSignalZData + shotData.trailingSignalZData + shotData.leadingGyroXData + shotData.trailingGyroXData + shotData.leadingGyroYData + shotData.trailingGyroYData + shotData.leadingGyroZData + shotData.trailingGyroZData
         /*
@@ -238,6 +244,14 @@ class MotionManager {
         let totalSignalYGyro = shotData.leadingGyroYData + shotData.trailingGyroYData
         let totalSignalZGyro = shotData.leadingGyroZData + shotData.trailingGyroZData
         
+        let data = ["AX": totalSignalXData,
+                    "AY": totalSignalYData,
+                    "AZ": totalSignalZData,
+                    "GX": totalSignalXGyro,
+                    "GY": totalSignalYGyro,
+                    "GZ": totalSignalZGyro
+        ]
+        
          let o = (totalSignalXData.count)
          
          for j in 1...o {
@@ -263,14 +277,12 @@ class MotionManager {
          for j in 1...o {
          exportString = exportString + "\(Double(totalSignalZGyro[j-1])), "
          }
-         
-       delegate?.didCaptureStroke(exportString)
+    
         return exportString
-        
     }
     
     func storeExportString (_ exportString: String) {
-        let timestamp = Date().millisecondsSince1970
+        //let timestamp = Date().millisecondsSince1970
         os_log("Stroke Data Exported")
         
     }

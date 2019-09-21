@@ -13,6 +13,11 @@
 		CA071F58231E93B50008CA41 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA071F57231E93B50008CA41 /* TrainingViewController.swift */; };
 		CA071F5A23210FB50008CA41 /* TrainingSessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA071F5923210FB50008CA41 /* TrainingSessionHandler.swift */; };
 		CA1BD768231E626B007618FE /* TrainingSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1BD767231E626B007618FE /* TrainingSetupViewController.swift */; };
+		CA4E564C23357692001FEB73 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E564B23357692001FEB73 /* PlayViewController.swift */; };
+		CA4E564E2335773F001FEB73 /* PlaySessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E564D2335773F001FEB73 /* PlaySessionHandler.swift */; };
+		CA4E565023357EC1001FEB73 /* MLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E564F23357EC1001FEB73 /* MLConstants.swift */; };
+		CA4E565223358088001FEB73 /* MotionAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E565123358088001FEB73 /* MotionAnalysis.swift */; };
+		CA4E5654233600AB001FEB73 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E5653233600AB001FEB73 /* SummaryViewController.swift */; };
 		CA7B76A8231588D000856BB5 /* SegueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B76A7231588D000856BB5 /* SegueManager.swift */; };
 		CA8DBB4B2307E5C800103052 /* FormUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DBB4A2307E5C800103052 /* FormUtilities.swift */; };
 		CA8DBB4D2307EFA600103052 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA8DBB4C2307EFA600103052 /* GoogleService-Info.plist */; };
@@ -125,6 +130,11 @@
 		CA071F57231E93B50008CA41 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		CA071F5923210FB50008CA41 /* TrainingSessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSessionHandler.swift; sourceTree = "<group>"; };
 		CA1BD767231E626B007618FE /* TrainingSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSetupViewController.swift; sourceTree = "<group>"; };
+		CA4E564B23357692001FEB73 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		CA4E564D2335773F001FEB73 /* PlaySessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySessionHandler.swift; sourceTree = "<group>"; };
+		CA4E564F23357EC1001FEB73 /* MLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLConstants.swift; sourceTree = "<group>"; };
+		CA4E565123358088001FEB73 /* MotionAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnalysis.swift; sourceTree = "<group>"; };
+		CA4E5653233600AB001FEB73 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		CA7B76A7231588D000856BB5 /* SegueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueManager.swift; sourceTree = "<group>"; };
 		CA8DBB4A2307E5C800103052 /* FormUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUtilities.swift; sourceTree = "<group>"; };
 		CA8DBB4C2307EFA600103052 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -255,6 +265,17 @@
 			path = Commons;
 			sourceTree = "<group>";
 		};
+		CA4E564A23357631001FEB73 /* Play Mode */ = {
+			isa = PBXGroup;
+			children = (
+				CA4E564B23357692001FEB73 /* PlayViewController.swift */,
+				CA4E564D2335773F001FEB73 /* PlaySessionHandler.swift */,
+				CA4E565123358088001FEB73 /* MotionAnalysis.swift */,
+				CA4E5653233600AB001FEB73 /* SummaryViewController.swift */,
+			);
+			path = "Play Mode";
+			sourceTree = "<group>";
+		};
 		CAA0CB0D230410BB0098331D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +283,7 @@
 				CAA0CB10230410DD0098331D /* Utilities.swift */,
 				CA8DBB4A2307E5C800103052 /* FormUtilities.swift */,
 				CA7B76A7231588D000856BB5 /* SegueManager.swift */,
+				CA4E564F23357EC1001FEB73 /* MLConstants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -323,16 +345,17 @@
 		D4286FC422B40A4400994C82 /* Hawk */ = {
 			isa = PBXGroup;
 			children = (
+				CAA0CB0D230410BB0098331D /* Helpers */,
+				CA4E564A23357631001FEB73 /* Play Mode */,
 				CA1BD766231E6234007618FE /* Training Mode */,
+				CAA0CB12230693500098331D /* Authentication View Controllers */,
 				D4A974A422D215B600627358 /* Hawk.entitlements */,
 				D4286FC522B40A4400994C82 /* AppDelegate.swift */,
-				CAA0CB12230693500098331D /* Authentication View Controllers */,
 				D4A9749F22CD109C00627358 /* SessionHandler.swift */,
 				D4286FC722B40A4400994C82 /* ViewController.swift */,
 				D42135C522B5073A00BD55D3 /* HomeController.swift */,
 				CAF7D91022F185DB00B8BEA5 /* Main.storyboard */,
 				D4286FCE22B40A4400994C82 /* LaunchScreen.storyboard */,
-				CAA0CB0D230410BB0098331D /* Helpers */,
 				D4286FCC22B40A4400994C82 /* Assets.xcassets */,
 				CA8DBB4C2307EFA600103052 /* GoogleService-Info.plist */,
 				D4286FD122B40A4400994C82 /* Info.plist */,
@@ -748,14 +771,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAA0CB162306C3C80098331D /* InitialViewController.swift in Sources */,
+				CA4E565223358088001FEB73 /* MotionAnalysis.swift in Sources */,
 				CA1BD768231E626B007618FE /* TrainingSetupViewController.swift in Sources */,
+				CA4E565023357EC1001FEB73 /* MLConstants.swift in Sources */,
 				D4286FC822B40A4400994C82 /* ViewController.swift in Sources */,
+				CA4E5654233600AB001FEB73 /* SummaryViewController.swift in Sources */,
 				D4A974A022CD109C00627358 /* SessionHandler.swift in Sources */,
 				CAA0CB11230410DD0098331D /* Utilities.swift in Sources */,
 				CAA0CB1A2307E39B0098331D /* SignUpViewController.swift in Sources */,
 				CA7B76A8231588D000856BB5 /* SegueManager.swift in Sources */,
 				D4286FC622B40A4400994C82 /* AppDelegate.swift in Sources */,
 				CAA0CB08230401EF0098331D /* HomeViewController.swift in Sources */,
+				CA4E564C23357692001FEB73 /* PlayViewController.swift in Sources */,
 				CA071F5A23210FB50008CA41 /* TrainingSessionHandler.swift in Sources */,
 				CAB7BFC32327D28D00683131 /* WatchSessionManager.swift in Sources */,
 				D42135C622B5073A00BD55D3 /* HomeController.swift in Sources */,
@@ -763,6 +790,7 @@
 				CA8DBB4B2307E5C800103052 /* FormUtilities.swift in Sources */,
 				CAA0CB182307DFC30098331D /* LoginViewController.swift in Sources */,
 				CAA0CB0F230410D30098331D /* Constants.swift in Sources */,
+				CA4E564E2335773F001FEB73 /* PlaySessionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

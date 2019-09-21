@@ -35,21 +35,21 @@ class HomeViewController: UIViewController {
 
     }
     
-
+/*
     @IBAction func startButtonTapped(_ sender: Any) {
 //      create an Auth object
         let auth = FUIAuth.defaultAuthUI()
         
 //      verify if user is logged in
         if auth?.auth?.currentUser != nil {
-            SegueManager.transitionToWorkout(self.view)
+            SegueManager.transitionToPlay(self.view)
         }
 //      if no user, transition to navigation and thus to login section
         else {
             SegueManager.transitionToNav(self.view)
         }
     }
-    
+*/
     
     @IBAction func logoutButtonTapped(_ sender: Any) {
         
