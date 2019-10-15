@@ -78,7 +78,7 @@ class TrainingViewController: UIViewController, TrainingSessionHandlerDelegate  
             
             let  db=Firestore.firestore()
             
-            db.collection("training").document(dataLocation).collection("data").addDocument(data: strokeData) { (error) in
+            db.collection("trainingNew").document(dataLocation).collection("data").addDocument(data: strokeData) { (error) in
                             if error != nil{
                             os_log("Error saving user data to database")
                             }

@@ -126,16 +126,48 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UKK-w5-MYN">
+                                <rect key="frame" x="40" y="377" width="295" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTW-sh-fVV">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kj-f3-TVI">
+                                        <rect key="frame" x="0.0" y="55" width="295" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="xeA-g0-PCd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accuracy: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XW6-0Q-ZAv">
+                                        <rect key="frame" x="0.0" y="110" width="295" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="zbc-U8-xFO" firstAttribute="trailing" secondItem="80Y-lI-lft" secondAttribute="trailing" constant="40" id="A9S-IS-vrI"/>
+                            <constraint firstItem="80Y-lI-lft" firstAttribute="top" secondItem="UKK-w5-MYN" secondAttribute="bottom" constant="40" id="J05-R3-iuq"/>
                             <constraint firstItem="zbc-U8-xFO" firstAttribute="bottom" secondItem="80Y-lI-lft" secondAttribute="bottom" constant="40" id="Sz1-Zo-BLc"/>
+                            <constraint firstItem="zbc-U8-xFO" firstAttribute="trailing" secondItem="UKK-w5-MYN" secondAttribute="trailing" constant="40" id="i6R-bB-icX"/>
+                            <constraint firstItem="UKK-w5-MYN" firstAttribute="leading" secondItem="zbc-U8-xFO" secondAttribute="leading" constant="40" id="jsk-yl-w9v"/>
                             <constraint firstItem="80Y-lI-lft" firstAttribute="leading" secondItem="zbc-U8-xFO" secondAttribute="leading" constant="40" id="ryY-a0-XeJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zbc-U8-xFO"/>
                     </view>
                     <connections>
+                        <outlet property="classificationAccuracyLabel" destination="XW6-0Q-ZAv" id="3Lb-Ub-WMU"/>
+                        <outlet property="countLabel" destination="MTW-sh-fVV" id="bsM-rQ-wO2"/>
+                        <outlet property="speedLabel" destination="4kj-f3-TVI" id="wut-jy-F7u"/>
                         <outlet property="summaryButton" destination="80Y-lI-lft" id="cis-rG-bZN"/>
                     </connections>
                 </viewController>

@@ -15,25 +15,78 @@ class PlayViewController: UIViewController, PlaySessionHandlerDelegate {
     //let mlConstants = MLConstants()
     
     @IBOutlet weak var summaryButton: UIButton!
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var speedLabel: UILabel!
+    @IBOutlet weak var classificationAccuracyLabel: UILabel!
     
     let motionAnalyser = MotionAnalysis()
     var count = 0
     var strokeSummary = [0,0,0,0,0]
     
-    func updateLabel(_ message: String) {
-        DispatchQueue.main.async {
-            self.categoryStrokeType.text = message
-            os_log("Message Recieved By iPhone")
-        }
-
-    }
-    
-
     var squareBox: UILabel!
     var category: UIView!
     var categoryTopMarker:UILabel!
     var categoryStrokeType:UILabel!
     
+    func updateLabel(_ message: String) {
+        DispatchQueue.main.async {
+            self.categoryStrokeType.text = message
+           // os_log("Message Recieved By iPhone")
+        }
+
+    }
+    
+    func updateSpeedLabel(_ speed: Double) {
+            let a:String = String(format:"%.1f", speed)
+            speedLabel.text = "Speed: \(a)"
+    }
+    
+    func updateClassAccuracyLabel(_ value: Double) {
+            let a:String = String(format:"%.1f", value)
+            classificationAccuracyLabel.text = "Accuracy: \(a)"
+    }
+    
+    func updateCount() {
+        DispatchQueue.main.async {
+            self.count += 1
+            self.countLabel.text = "Count: \(self.count)"
+        }
+        
+    }
+    
+    
+    func analyseStroke(_ fileURL: URL) {
+        
+        var strokeData = ""
+        
+        do {
+            strokeData = try String(contentsOfFile: fileURL.path)
+            } catch {
+                print(error.localizedDescription)
+            }
+        
+        let data = reshapeData(strokeData)
+        let speed = motionAnalyser.strokeMetric(data)
+        let strokeClass = motionAnalyser.classifyStroke(data)
+        
+        
+        print(strokeClass)
+        trackStrokes(strokeClass[1] as! String)
+        updateLabel(strokeClass[1] as! String)
+        DispatchQueue.main.async {
+            self.category.blink()
+            self.updateSpeedLabel(speed)
+            if let val = strokeClass[0] as? Double {
+                self.updateClassAccuracyLabel(val)
+            } else{
+                
+            }
+
+        }
+        
+    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         PlaySessionHandler.shared.sessionHandlerDelegate = self
@@ -49,33 +102,12 @@ class PlayViewController: UIViewController, PlaySessionHandlerDelegate {
         summaryViewController.strokeSummary = strokeSummary
     }
     
-    func updateCount() {
-        
-    }
-    
-    func analyseStroke(_ fileURL: URL) {
-        
-        var strokeData = ""
-        
-        do {
-            strokeData = try String(contentsOfFile: fileURL.path)
-            } catch {
-                print(error.localizedDescription)
-            }
-        
-        let data = reshapeData(strokeData)
-        
-        let strokeClass = motionAnalyser.classifyStroke(data)
-        print(strokeClass)
-        
-        trackStrokes(strokeClass)
-        updateLabel(strokeClass)
-        
-    }
     
     func reshapeData(_ strokeData: String) -> [Double] {
         let StringRecordedArr = strokeData.components(separatedBy: ",")
-        return StringRecordedArr.compactMap(Double.init)
+        let newData: [Double] = StringRecordedArr.compactMap{ str in Double (str) }
+        //print(newData.count)
+        return newData
         }
         
     func trackStrokes(_ strokeClass: String) {
@@ -95,6 +127,7 @@ class PlayViewController: UIViewController, PlaySessionHandlerDelegate {
         }
     
     }
+    
     func setUpElements() {
         
         addCategorySubview()
@@ -163,6 +196,13 @@ class PlayViewController: UIViewController, PlaySessionHandlerDelegate {
            squareBox.heightAnchor.constraint(equalToConstant: 90).isActive = true
            
        }
+    
+}
 
 
+extension UIView{
+     func blink() {
+         self.alpha = 0.2
+         UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveLinear], animations: {self.alpha = 1.0}, completion: nil)
+     }
 }

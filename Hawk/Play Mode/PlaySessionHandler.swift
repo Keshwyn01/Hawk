@@ -102,7 +102,7 @@ class PlaySessionHandler : NSObject, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any]) {
         DispatchQueue.main.async {
-            os_log("Data Received")
+          //  os_log("Data Received")
             self.sessionHandlerDelegate?.updateCount()
             //self.sessionHandlerDelegate?.uploadData(userInfo)
         }

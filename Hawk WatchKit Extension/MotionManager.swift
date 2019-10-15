@@ -255,27 +255,27 @@ class MotionManager {
          let o = (totalSignalXData.count)
          
          for j in 1...o {
-         exportString = exportString + "\(Double(totalSignalXData[j-1])), "
+         exportString = exportString + "\(Double(totalSignalXData[j-1])),"
          }
          
          for j in 1...o {
-         exportString = exportString + "\(Double(totalSignalYData[j-1])), "
+         exportString = exportString + "\(Double(totalSignalYData[j-1])),"
          }
          
          for j in 1...o {
-         exportString = exportString + "\(Double(totalSignalZData[j-1])), "
+         exportString = exportString + "\(Double(totalSignalZData[j-1])),"
          }
          
          for j in 1...o {
-         exportString = exportString + "\(Double(totalSignalXGyro[j-1])), "
+         exportString = exportString + "\(Double(totalSignalXGyro[j-1])),"
          }
          
          for j in 1...o {
-         exportString = exportString + "\(Double(totalSignalYGyro[j-1])), "
+         exportString = exportString + "\(Double(totalSignalYGyro[j-1])),"
          }
          
          for j in 1...o {
-         exportString = exportString + "\(Double(totalSignalZGyro[j-1])), "
+         exportString = exportString + "\(Double(totalSignalZGyro[j-1])),"
          }
     
         return exportString

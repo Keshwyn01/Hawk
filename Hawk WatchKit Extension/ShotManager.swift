@@ -57,7 +57,7 @@ class ShotManager {
         
         let accelerationMagnitude = (xAcceleration*xAcceleration + yAcceleration*yAcceleration + zAcceleration*yAcceleration).squareRoot()
         
-        if (accelerationMagnitude > 2) && (self.leadingSignalXData.count == 192) {
+        if (accelerationMagnitude > 4) && (self.leadingSignalXData.count == 192) {
             self.hasShotBeenDetected = true
             WKInterfaceDevice.current().play(.notification)
         }
