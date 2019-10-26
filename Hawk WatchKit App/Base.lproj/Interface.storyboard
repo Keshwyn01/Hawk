@@ -27,6 +27,7 @@
                             </items>
                         </group>
                         <label alignment="left" text="Not Recording" id="c8C-iJ-50M"/>
+                        <label alignment="left" text="Select Mode" id="s72-jM-sa3"/>
                         <label alignment="left" text="Label" id="v5c-3u-k2Q"/>
                         <button width="1" alignment="left" title="Send Message" id="x97-J7-aTD">
                             <connections>
@@ -35,6 +36,7 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="modeLabel" destination="s72-jM-sa3" id="Q4S-UT-kzJ"/>
                         <outlet property="titleLabel" destination="c8C-iJ-50M" id="Ce1-Xa-E54"/>
                         <outlet property="userAccelLabel" destination="v5c-3u-k2Q" id="odb-2S-slM"/>
                     </connections>

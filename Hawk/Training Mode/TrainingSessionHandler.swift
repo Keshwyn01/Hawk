@@ -10,10 +10,6 @@
 import Foundation
 import WatchConnectivity
 import os.log
-import FirebaseUI
-import FirebaseFirestore
-
-
 
 protocol TrainingSessionHandlerDelegate {
     func updateCount ()
@@ -38,7 +34,7 @@ class TrainingSessionHandler : NSObject, WCSessionDelegate {
     override init() {
         super.init()
         
-        // 3: Start and avtivate session if it's supported
+        // 3: Start and acvtivate session if it's supported
         if isSuported() {
             session.delegate = self
             session.activate()
@@ -86,14 +82,20 @@ class TrainingSessionHandler : NSObject, WCSessionDelegate {
     ///   - message: message received
     ///   - replyHandler: response handler
     
+    
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-
+        if message["request"] as? String == "version" {
+            replyHandler(["Mode" : "Train"])
+        }
     }
+    // func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+    
+    //  }
     
     // Called when a userInfo is received - this is used to transfer data even when screen is turned off
     //
     
-     func session(_ session: WCSession, didReceive file: WCSessionFile) {
+    func session(_ session: WCSession, didReceive file: WCSessionFile) {
         os_log("Data Received")
         
         self.sessionHandlerDelegate?.updateCount()
@@ -108,16 +110,16 @@ class TrainingSessionHandler : NSObject, WCSessionDelegate {
             self.sessionHandlerDelegate?.updateCount()
             self.sessionHandlerDelegate?.uploadData(userInfo)
         }
-
+        
         
     }
     
-
+    
 }
-    
 
 
 
-    
-    
+
+
+
 

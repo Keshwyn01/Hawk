@@ -32,9 +32,7 @@
 		CADFC6282321194800CFEF9D /* MLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFC6272321194800CFEF9D /* MLConstants.swift */; };
 		CAF7D91122F185DB00B8BEA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF7D91022F185DB00B8BEA5 /* Main.storyboard */; };
 		D42135C422B4101400BD55D3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42135C322B4101400BD55D3 /* HealthKit.framework */; };
-		D42135C622B5073A00BD55D3 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42135C522B5073A00BD55D3 /* HomeController.swift */; };
 		D4286FC622B40A4400994C82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4286FC522B40A4400994C82 /* AppDelegate.swift */; };
-		D4286FC822B40A4400994C82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4286FC722B40A4400994C82 /* ViewController.swift */; };
 		D4286FCD22B40A4400994C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4286FCC22B40A4400994C82 /* Assets.xcassets */; };
 		D4286FD022B40A4400994C82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4286FCE22B40A4400994C82 /* LaunchScreen.storyboard */; };
 		D4286FDB22B40A4400994C82 /* HawkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4286FDA22B40A4400994C82 /* HawkTests.swift */; };
@@ -50,7 +48,6 @@
 		D428701C22B40A9B00994C82 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D428701B22B40A9B00994C82 /* WorkoutManager.swift */; };
 		D428701E22B40AC500994C82 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D428701D22B40AC500994C82 /* MotionManager.swift */; };
 		D428702022B40ADF00994C82 /* ShotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D428701F22B40ADF00994C82 /* ShotManager.swift */; };
-		D4A974A022CD109C00627358 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A9749F22CD109C00627358 /* SessionHandler.swift */; };
 		D4A974A622D215B600627358 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A974A522D215B600627358 /* HealthKit.framework */; };
 		DED73B9BE7BD7A4EB4AC3FED /* Pods_HawkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19468B2FFDAB9944943A4B2B /* Pods_HawkUITests.framework */; };
 		E5009847941D394C78A2FEB5 /* Pods_Hawk_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17453E3FE07A427A3B57AC96 /* Pods_Hawk_WatchKit_App.framework */; };
@@ -151,10 +148,8 @@
 		CAF7D91022F185DB00B8BEA5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D42135C122B4101400BD55D3 /* Hawk WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hawk WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		D42135C322B4101400BD55D3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
-		D42135C522B5073A00BD55D3 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		D4286FC222B40A4400994C82 /* Hawk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hawk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4286FC522B40A4400994C82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4286FC722B40A4400994C82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D4286FCC22B40A4400994C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4286FCF22B40A4400994C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4286FD122B40A4400994C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,7 +173,6 @@
 		D428701B22B40A9B00994C82 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		D428701D22B40AC500994C82 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		D428701F22B40ADF00994C82 /* ShotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotManager.swift; sourceTree = "<group>"; };
-		D4A9749F22CD109C00627358 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
 		D4A974A422D215B600627358 /* Hawk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hawk.entitlements; sourceTree = "<group>"; };
 		D4A974A522D215B600627358 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		FE8BD4DB32BAD5DD24716EC2 /* Pods_Hawk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hawk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -351,9 +345,6 @@
 				CAA0CB12230693500098331D /* Authentication View Controllers */,
 				D4A974A422D215B600627358 /* Hawk.entitlements */,
 				D4286FC522B40A4400994C82 /* AppDelegate.swift */,
-				D4A9749F22CD109C00627358 /* SessionHandler.swift */,
-				D4286FC722B40A4400994C82 /* ViewController.swift */,
-				D42135C522B5073A00BD55D3 /* HomeController.swift */,
 				CAF7D91022F185DB00B8BEA5 /* Main.storyboard */,
 				D4286FCE22B40A4400994C82 /* LaunchScreen.storyboard */,
 				D4286FCC22B40A4400994C82 /* Assets.xcassets */,
@@ -774,9 +765,7 @@
 				CA4E565223358088001FEB73 /* MotionAnalysis.swift in Sources */,
 				CA1BD768231E626B007618FE /* TrainingSetupViewController.swift in Sources */,
 				CA4E565023357EC1001FEB73 /* MLConstants.swift in Sources */,
-				D4286FC822B40A4400994C82 /* ViewController.swift in Sources */,
 				CA4E5654233600AB001FEB73 /* SummaryViewController.swift in Sources */,
-				D4A974A022CD109C00627358 /* SessionHandler.swift in Sources */,
 				CAA0CB11230410DD0098331D /* Utilities.swift in Sources */,
 				CAA0CB1A2307E39B0098331D /* SignUpViewController.swift in Sources */,
 				CA7B76A8231588D000856BB5 /* SegueManager.swift in Sources */,
@@ -785,7 +774,6 @@
 				CA4E564C23357692001FEB73 /* PlayViewController.swift in Sources */,
 				CA071F5A23210FB50008CA41 /* TrainingSessionHandler.swift in Sources */,
 				CAB7BFC32327D28D00683131 /* WatchSessionManager.swift in Sources */,
-				D42135C622B5073A00BD55D3 /* HomeController.swift in Sources */,
 				CA071F58231E93B50008CA41 /* TrainingViewController.swift in Sources */,
 				CA8DBB4B2307E5C800103052 /* FormUtilities.swift in Sources */,
 				CAA0CB182307DFC30098331D /* LoginViewController.swift in Sources */,

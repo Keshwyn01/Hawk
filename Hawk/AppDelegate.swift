@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         */
         
         
-        if !SessionHandler.shared.isSuported() {
+        if !PlaySessionHandler.shared.isSuported() {
             print("WCSession not supported (f.e. on iPad).")
         }
         

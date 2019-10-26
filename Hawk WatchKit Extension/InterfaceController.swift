@@ -15,8 +15,15 @@ import os.log
 import HealthKit
 import UIKit
 
+protocol InterfaceControllerDelegate: class {
+    
+    func setWindow(_ mode: String)
+}
+
 class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
     
+    private var session = WCSession.default
+    weak var delegate: InterfaceControllerDelegate?
     
     // MARK: Properties
     //let fm = FileManager.default
@@ -31,33 +38,54 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
     var attitudeStr = ""
     var userAccelStr = ""
     var rotationRateStr = ""
+    var windowSize = [[100, 100], [80,80]]
     
     // MARK: Interface Properties
     
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
     @IBOutlet weak var userAccelLabel: WKInterfaceLabel!
+    @IBOutlet weak var modeLabel: WKInterfaceLabel!
     
     override init() {
-        super.init() 
-//        os_log("Test Log")
+        super.init()
         workoutManager.delegate = self
     }
-    
     
     override func didDeactivate() {
         super.didDeactivate()
         active = false
     }
     
-    
-    
     @IBAction func start() {
-        titleLabel.setText("RECORDING")
+        
+        print(self.workoutManager.motionManager.shotData.windowSize)
+        if isReachable() {
+            session.sendMessage(["request" : "version"], replyHandler: { (response) in
+                guard let message = response["Mode"] else{return}
+                let mode = message as! String
+                if mode == "Train" {
+                    self.workoutManager.motionManager.shotData.windowSize = self.windowSize[0];
+                }
+                else if mode == "Play" {
+                    self.workoutManager.motionManager.shotData.windowSize = self.windowSize[1];
+                }
+                self.modeLabel.setText(mode)
+                self.titleLabel.setText("Recording")
+                print(self.workoutManager.motionManager.shotData.windowSize)
+                print(self.workoutManager.motionManager.shotData.windowSize[0])
+                print(self.workoutManager.motionManager.shotData.windowSize[1])
+                //self.delegate?.setWindow("test")
+            }, errorHandler: { (error) in
+                print("Error sending message: %@", error)
+            })
+        } else {
+            self.titleLabel.setText("iPhone Not Reachable")
+        }
         
         workoutManager.startWorkout()
-// added because when start workout first called, app stops working after screen goes to sleep. When stopworkout called followed by start, screen sleep issue if fixed - this is a temporary fix, need to understand why this issue arises
-      workoutManager.stopWorkout()
-       workoutManager.startWorkout()
+        // added because when start workout first called, app stops working after screen goes to sleep. When stopworkout called followed by start, screen sleep issue if fixed - this is a temporary fix, need to understand why this issue arises
+        workoutManager.stopWorkout()
+        workoutManager.startWorkout()
     }
     
     @IBAction func stop() {
@@ -67,14 +95,13 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
         print(fileTrans.count)
         if session.hasContentPending {
             titleLabel.setText("Data Transfer Pending")
-            
             repeat {
-                
             } while session.hasContentPending
         }
         
         clearTempFolder()
         titleLabel.setText("Ready")
+        modeLabel.setText("Select Mode")
         
         workoutManager.stopWorkout()
         
@@ -103,19 +130,19 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
         
         titleLabel.setText("Clearing Temp Folder")
         for url in urlList {
-        
-        do{
-        try FileManager.default.removeItem(at: url)
-        } catch {
-        print(error.localizedDescription)
-        }
+            
+            do{
+                try FileManager.default.removeItem(at: url)
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
     
     
     //WATCHCONNECTIVITY
     
-    private var session = WCSession.default
+    
     
     
     // MARK: - Items Table
@@ -128,13 +155,13 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
         let tempFileURL = tempDirectoryURL.appendingPathComponent(tempFileName)
         
         do{
-        try strokeType.write(to: tempFileURL, atomically: true, encoding: String.Encoding.utf8)
+            try strokeType.write(to: tempFileURL, atomically: true, encoding: String.Encoding.utf8)
         } catch {
             print(error.localizedDescription)
         }
         
         urlList.append(tempFileURL)
-    
+        
         guard session.activationState == .activated else {
             os_log("Session not active!")
             return
@@ -159,12 +186,12 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
     
     /// Updating all contents of WKInterfaceTable
     private func updateTable() {
-  //      table.setNumberOfRows(items.count, withRowType: "Row")
-  //      for (i, item) in items.enumerated() {
-  //          if let row = table.rowController(at: i) as? Row {
-   //             row.lbl.setText(item)
-    //        }
-    //    }
+        //      table.setNumberOfRows(items.count, withRowType: "Row")
+        //      for (i, item) in items.enumerated() {
+        //          if let row = table.rowController(at: i) as? Row {
+        //             row.lbl.setText(item)
+        //        }
+        //    }
     }
     
     func activateWatchConnectivity () {
@@ -179,15 +206,15 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
         super.awake(withContext: context)
         
         // Configure interface objects here.
- 
-        }
+        
+    }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
         // 2: Initialization of session and set as delegate this InterfaceController if it's supported
-
+        
         updateLabels()
     }
     

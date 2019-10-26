@@ -34,6 +34,9 @@ class ShotManager {
     
     
     var size = 0
+    var windowSize = [50,50]
+    var leadingWindow = 0
+    
     var hasShotBeenDetected = false
     var hasShotBeenStored = false
     
@@ -57,7 +60,7 @@ class ShotManager {
         
         let accelerationMagnitude = (xAcceleration*xAcceleration + yAcceleration*yAcceleration + zAcceleration*yAcceleration).squareRoot()
         
-        if (accelerationMagnitude > 4) && (self.leadingSignalXData.count == 192) {
+        if (accelerationMagnitude > 4) && (self.leadingSignalXData.count == windowSize[1]) {
             self.hasShotBeenDetected = true
             WKInterfaceDevice.current().play(.notification)
         }
@@ -70,7 +73,7 @@ class ShotManager {
             self.leadingGyroYData.append(yGyro)
             self.leadingGyroZData.append(zGyro)
             
-            if self.leadingSignalXData.count > 192 {
+            if self.leadingSignalXData.count > windowSize[1] {
                 self.leadingSignalXData.removeFirst()
                 self.leadingSignalYData.removeFirst()
                 self.leadingSignalZData.removeFirst()
@@ -80,7 +83,7 @@ class ShotManager {
             }
         }
         
-        if self.hasShotBeenDetected == true && self.trailingSignalXData.count < 192 {
+        if self.hasShotBeenDetected == true && self.trailingSignalXData.count < windowSize[0] {
             self.trailingSignalXData.append(xAcceleration)
             self.trailingSignalYData.append(yAcceleration)
             self.trailingSignalZData.append(zAcceleration)
@@ -89,7 +92,7 @@ class ShotManager {
             self.trailingGyroZData.append(zGyro)
         }
         
-        if self.hasShotBeenDetected == true && self.trailingSignalXData.count == 192 {
+        if self.hasShotBeenDetected == true && self.trailingSignalXData.count == windowSize[0] {
             self.hasShotBeenStored = true
         }
     }

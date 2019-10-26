@@ -9,7 +9,7 @@
 import UIKit
 
 class SummaryViewController: UIViewController {
-
+    
     var strokeSummary: [Int]?
     
     @IBOutlet weak var dismissButton: UIButton!
@@ -20,25 +20,21 @@ class SummaryViewController: UIViewController {
     @IBOutlet weak var fsCount: UILabel!
     @IBOutlet weak var bsCount: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpElements()
     }
-    
     
     @IBAction func dimissButtonTapped(_ sender: Any) {
         dismiss(animated: true)
     }
     
     func setUpElements() {
-        
         Utilities.styleFilledButton(dismissButton)
         Utilities.styleNavBar(self)
         guard let summary = strokeSummary else {
-               return
-           }
+            return
+        }
         //print(summary)
         ftsCount.text = "Forehand Top Spin: \(summary[0])"
         btsCount.text = "Backhand Top Spin: \(summary[1])"
@@ -46,6 +42,5 @@ class SummaryViewController: UIViewController {
         fsCount.text = "Forehand Slice: \(summary[3])"
         bsCount.text = "Backhand Slide: \(summary[4])"
     }
-    
-    
+
 }

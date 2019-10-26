@@ -25,7 +25,7 @@ class SegueManager{
         view.window?.makeKeyAndVisible()
         
     }
-    
+    /*
     static func transitionToWorkout(_ view : UIView){
         
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -40,7 +40,7 @@ class SegueManager{
         view.window?.makeKeyAndVisible()
 
         }
-    
+ 
     static func transitionToPlay(_ view : UIView){
         
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -54,6 +54,8 @@ class SegueManager{
         view.window?.makeKeyAndVisible()
 
         }
+    
+ */
     
     static func transitionToNav(_ view : UIView){
         

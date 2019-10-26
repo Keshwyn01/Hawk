@@ -9,16 +9,9 @@
 import Foundation
 import WatchConnectivity
 import os.log
-import FirebaseUI
-import FirebaseFirestore
-
-
-
 
 protocol SessionHandlerDelegate {
     func updateLabel (_ message: String)
-    
-    
 }
 
 class SessionHandler : NSObject, WCSessionDelegate {
@@ -89,38 +82,6 @@ class SessionHandler : NSObject, WCSessionDelegate {
         
         let newMessage = message["request"]
         sessionHandlerDelegate?.updateLabel(newMessage as! String)
-        
-        
- //     When message is received by phone, send information/ store information to Firestore
-        let docData: [String: Any] = [
-            "Stroke Type": newMessage!,
-            "booleanExample": true,
-            "numberExample": 3.14159265,
-            "date": Timestamp(date: Date()),
-            "arrayExample": [5, true, "hello"],
-        ]
-        
-        
-        let auth = FUIAuth.defaultAuthUI()!
-                
-                   if auth.auth?.currentUser != nil {
-                    let uid = auth.auth!.currentUser?.uid
-                    os_log("test test test")
-                    let  db=Firestore.firestore()
-                    db.collection(uid!).addDocument(data: docData) { (error) in
-                        
-                        if error != nil{
-                            // Show error message
-                            print("Error saving user data to database")
-                            }
-                        }
-                 
-                }
-                   else {
-                   print("No user signed in")
-                }
-        
-        //os_log("test test test")
         
         if message["request"] as? String == "version" {
             replyHandler(["version" : "\(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") ?? "No version")"])
