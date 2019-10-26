@@ -38,7 +38,7 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
     var attitudeStr = ""
     var userAccelStr = ""
     var rotationRateStr = ""
-    var windowSize = [[100, 100], [80,80]]
+    var windowSize = [[192, 192], [80,80]] // trailing 1, leading 0
     
     // MARK: Interface Properties
     
